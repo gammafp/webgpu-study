@@ -8,8 +8,8 @@ import { RouterLink, RouterView } from "vue-router";
             <h3 class="title">WebGPU learn</h3>
             <div class="wrapper-links">
                 <nav>
-                    <RouterLink to="/">Triangle</RouterLink>
-                    <RouterLink to="/points">Points</RouterLink>
+                    <RouterLink to="./">Triangle</RouterLink>
+                    <RouterLink to="./points">Points</RouterLink>
                 </nav>
             </div>
         </header>

@@ -1,33 +1,74 @@
-# webgpu-book
+# Webgpu Study
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is created with Vue for the scaffolding.
 
-## Recommended IDE Setup
+To see the live page please go to: [HERE](https://gammafp.github.io/webgpu-study/).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+![screenshot](screenshot.png)
 
-## Type Support for `.vue` Imports in TS
+## Scripts
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+To install dependencies:
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+To dev the project:
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
 
-```sh
-npm run build
+## Files
+
+Each excersice I have to study is inside `src/views/`.
+
+Inside the `views` you can find some Vue pages components with some simple code with webGPU configuration.
+
+For example:
+
+```js
+<script setup lang="ts">
+import { onMounted } from "vue";
+
+import CanvasCotainer from "../../components/CanvasContainer.vue";
+
+const render = async () => {
+    
+    ... 
+
+    // create shader module
+    const shaderModule = device.createShaderModule({
+        code: `
+            const pos_constant = array<vec3f, 3>(
+                vec3f(0.0, 0.5, 0),
+                vec3f(-0.5, -0.5, 0),
+                vec3f(0.5, - 0.5, 0)
+            );
+            
+           ...
+        `,
+    });
+
+    ...
+
+    device.queue.submit([commandBuffer]);
+};
+
+onMounted(() => {
+    render();
+});
+</script>
+
+<template>
+    <CanvasCotainer />
+</template>
+
 ```
+
+Each page have a generic `CanvasContainer` component with the id: canvas-container (you can find this file inside `src/components`).
+
+---
+
+Created by Francisco José Pereira Alvarado - (gammafp).  
+Twitter: https://twitter.com/gammafp

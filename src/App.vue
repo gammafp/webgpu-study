@@ -10,6 +10,7 @@ import { RouterLink, RouterView } from "vue-router";
                 <nav>
                     <RouterLink to="/">Triangle</RouterLink>
                     <RouterLink to="/points">Points</RouterLink>
+                    <RouterLink to="/lines-strip">Lines and strips</RouterLink>
                 </nav>
             </div>
         </header>

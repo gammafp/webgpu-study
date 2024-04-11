@@ -1,0 +1,100 @@
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+</script>
+
+<template>
+    <div class="left">
+        <header>
+            <h3 class="title">WebGPU learn</h3>
+            <div class="wrapper-links">
+                <nav>
+                    <RouterLink to="/">Triangle</RouterLink>
+                    <RouterLink to="/points">Points</RouterLink>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <div class="right">
+        <div class="render-container">
+            <RouterView />
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid salmon;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    /* outline: 1px solid red; */
+    border-right: 1px solid salmon;
+    background-color: var(--color-background);
+    & header {
+        margin-top: 1rem;
+    }
+    overflow-y: auto;
+    /* scrollbar style */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-text);
+        border-radius: 10px;
+    }
+    padding-bottom: 20px;
+}
+
+.right {
+    padding: 1rem;
+    width: calc(100% - 250px);
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.render-container {
+    margin-top: -40px;
+}
+
+.wrapper-links nav {
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid blue; */
+}
+
+nav a:nth-last-child(1) {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid salmon;
+}
+
+nav a {
+    padding: 1rem;
+}
+
+nav a.router-link-exact-active {
+    color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+    background-color: transparent;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 1rem;
+
+}
+
+nav a:first-of-type {
+    border: 0;
+}
+</style>

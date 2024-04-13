@@ -1,6 +1,6 @@
 import { shaders } from "./shaders";
 
-export const render = async () => {
+export const render = async (lineOption = "line-list") => {
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;
     const context = canvas.getContext('webgpu') as GPUCanvasContext;
 
@@ -41,7 +41,7 @@ export const render = async () => {
     const pipeline = device.createRenderPipeline({
         layout: 'auto',
         primitive: {
-            topology: 'point-list'
+            topology: lineOption === "line-strip" ? 'line-strip' : 'line-list',
         },
         vertex: {
             module: shaderModuleVertex,

@@ -64,7 +64,7 @@ export const render = async () => {
         colorAttachments: [
             {
                 view: context.getCurrentTexture().createView(),
-                clearValue: [0.5569, 0.2667, 0.6784, 1],
+                clearValue: [0, 0, 0, 1],
                 loadOp: 'clear',
                 storeOp: 'store'
             }

@@ -101,5 +101,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <CanvasCotainer />
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <p class="text-center">
+            This is the first primitive example of a triangle using WebGPU.
+            The triangle is drawn using a shader module that defines the vertex and fragment shaders.
+        </p>
+        <CanvasCotainer />
+    </div>
 </template>

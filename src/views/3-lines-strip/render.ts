@@ -64,7 +64,7 @@ export const render = async (lineOption = "line-list") => {
         colorAttachments: [
             {
                 view: context.getCurrentTexture().createView(),
-                clearValue: [0.3, 0.3, 0.0, 1],
+                clearValue: [0.0, 0.0, 0.0, 1],
                 loadOp: 'clear',
                 storeOp: 'store'
             }

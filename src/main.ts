@@ -1,4 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/main.css';
+
+import hljs from 'highlight.js';
+hljs.highlightAll();
 
 import { createApp } from 'vue';
 

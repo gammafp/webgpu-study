@@ -16,8 +16,17 @@ watch(lineOption, (newVal) => {
 
 <template>
     <div>
-        <div class="options">
-            <label>
+        <div>
+            <p>
+                In this example, we draw a little lines in the screen.
+                This is another primitive of webGPU.
+            <br />
+                You can choose between Line List and Line Strip.
+            </p>
+        </div>
+        <hr>
+        <div class="options m-2">
+            <label class="mx-2">
                 <input type="radio" value="line-list" v-model="lineOption" />
                 Line List
             </label>

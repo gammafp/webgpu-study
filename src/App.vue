@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from "vue-router";
         </header>
     </div>
     <div class="right">
-        <div class="render-container">
+        <div class="right-container">
             <RouterView />
         </div>
     </div>
@@ -56,16 +56,18 @@ import { RouterLink, RouterView } from "vue-router";
     padding: 1rem;
     width: calc(100% - 250px);
     height: 100vh;
+
     overflow: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.right-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
-.render-container {
-    margin-top: -40px;
-}
-
 .wrapper-links nav {
     display: flex;
     flex-direction: column;
@@ -92,7 +94,6 @@ nav a.router-link-exact-active:hover {
 nav a {
     display: inline-block;
     padding: 10px 1rem;
-
 }
 
 nav a:first-of-type {

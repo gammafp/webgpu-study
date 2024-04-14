@@ -4,6 +4,12 @@ export const render = async (lineOption = "line-list") => {
     const canvas = document.getElementById('canvas') as HTMLCanvasElement;
     const context = canvas.getContext('webgpu') as GPUCanvasContext;
 
+    let stripIndexFormat: GPUIndexFormat | undefined = undefined;
+
+    if (lineOption === "line-strip") {
+        stripIndexFormat = 'uint32';
+    }
+
     // ask about gpu
     const gpu = navigator.gpu;
     if (!gpu) {
@@ -37,11 +43,13 @@ export const render = async (lineOption = "line-list") => {
         code: shaders.wgsl.fragment
     });
 
+    console.log("Strip Index Format: ", stripIndexFormat)
     // Create render pipeline
     const pipeline = device.createRenderPipeline({
         layout: 'auto',
         primitive: {
             topology: lineOption === "line-strip" ? 'line-strip' : 'line-list',
+            stripIndexFormat: stripIndexFormat
         },
         vertex: {
             module: shaderModuleVertex,

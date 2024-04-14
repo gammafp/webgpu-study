@@ -60,7 +60,7 @@ watch(lineOption, (newVal) => {
 const pipeline = device.createRenderPipeline({
 layout: 'auto',
 primitive: {
-    topology: lineOption === "line-strip" ? 'line-strip' : 'line-list',+
+    topology: lineOption === "line-strip" ? 'line-strip' : 'line-list',
     
 },
 vertex: {

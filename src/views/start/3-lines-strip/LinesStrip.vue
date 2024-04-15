@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { render } from "./render";
-import CanvasContainer from "../../components/CanvasContainer.vue";
+import CanvasContainer from "@/components/CanvasContainer.vue";
 
 const lineOption = ref("line-list");
 

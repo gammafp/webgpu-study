@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import FirstTriangle1 from "../views/1-triangle/FirstTriangle1.vue";
-import Points from "../views/2-points/Points.vue";
-import LinesStrip from "@/views/3-lines-strip/LinesStrip.vue";
-import TriangleStrip from "@/views/4-triangle-strip/TriangleStrip.vue";
+import FirstTriangle1 from "@/views/start/1-triangle/FirstTriangle1.vue";
+import Points from "@/views/start/2-points/Points.vue";
+import LinesStrip from "@/views/start/3-lines-strip/LinesStrip.vue";
+import TriangleStrip from "@/views/start/4-triangle-strip/TriangleStrip.vue";
 
+import TriangleColored from "@/views/buffers/1-triangle-colored/TriangleColored.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
             path: "/triangle-strip",
             name: "triangle-strip",
             component: TriangleStrip
+        },
+        {
+            path: "/triangle-colored",
+            name: "triangle-colored",
+            component: TriangleColored
         }
     ],
 });

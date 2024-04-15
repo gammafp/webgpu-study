@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 
-import CanvasCotainer from "../../components/CanvasContainer.vue";
+import CanvasCotainer from "@/components/CanvasContainer.vue";
 
 const render = async () => {
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;

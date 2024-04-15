@@ -21,9 +21,9 @@ import { RouterLink, RouterView } from "vue-router";
                     <h5>- Buffers -</h5>
                 </div>
                 <nav>
-                    ...
-                    <!-- <RouterLink to="/">Triangle</RouterLink>
-                    <RouterLink to="/points">Points</RouterLink>
+                    <RouterLink to="/triangle-colored">Triangle Colored</RouterLink>
+                    <span class="ms-3">...</span>
+                    <!-- <RouterLink to="/points">Points</RouterLink>
                     <RouterLink to="/lines-strip">Lines and strips</RouterLink>
                     <RouterLink to="/triangle-strip">Triangles and strips</RouterLink> -->
                 </nav>

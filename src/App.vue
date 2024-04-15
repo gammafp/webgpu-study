@@ -7,10 +7,25 @@ import { RouterLink, RouterView } from "vue-router";
         <header>
             <h3 class="title">WebGPU learn</h3>
             <div class="wrapper-links">
+                <div class="text-center">
+                    <h5>- Start -</h5>
+                    <div class="border-bottom border-dark"></div>
+                </div>
                 <nav>
                     <RouterLink to="/">Triangle</RouterLink>
                     <RouterLink to="/points">Points</RouterLink>
                     <RouterLink to="/lines-strip">Lines and strips</RouterLink>
+                    <RouterLink to="/triangle-strip">Triangles and strips</RouterLink>
+                </nav>
+                <div class="text-center">
+                    <h5>- Buffers -</h5>
+                </div>
+                <nav>
+                    ...
+                    <!-- <RouterLink to="/">Triangle</RouterLink>
+                    <RouterLink to="/points">Points</RouterLink>
+                    <RouterLink to="/lines-strip">Lines and strips</RouterLink>
+                    <RouterLink to="/triangle-strip">Triangles and strips</RouterLink> -->
                 </nav>
             </div>
         </header>
@@ -93,7 +108,8 @@ nav a.router-link-exact-active:hover {
 
 nav a {
     display: inline-block;
-    padding: 10px 1rem;
+    padding: 5px 1rem;
+    font-size: 12px;
 }
 
 nav a:first-of-type {

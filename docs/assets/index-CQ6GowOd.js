@@ -165,7 +165,7 @@ fragment: {
 
             @fragment
             fn fragmentMain() -> @location(0) vec4f {
-                let new_color = vec4f(1, 0, 0, 1.0); 
+                let new_color = vec4f(0.98, 0.52, 0.447, 1.0); 
                 return new_color;
             }
         `});console.log("Triangle Options",r);const m=d.createRenderPipeline({layout:"auto",vertex:{module:u,entryPoint:"vertexMain"},fragment:{module:u,entryPoint:"fragmentMain",targets:[{format:_}]},primitive:{topology:r,stripIndexFormat:l}}),E=d.createCommandEncoder(),T={colorAttachments:[{view:a.getCurrentTexture().createView(),clearValue:[0,0,0,1],storeOp:"store",loadOp:"clear"}]},b=E.beginRenderPass(T);b.setPipeline(m),b.draw(9,1,0,0),b.end();const N=E.finish();d.queue.submit([N])},n=Oi("triangle-list");return pn(n,r=>{e(r)}),Ar(()=>{e(n.value)}),(r,i)=>(Hn(),Vn("div",jA,[eI,Ae("div",tI,[Ae("label",nI,[ui(Ae("input",{type:"radio",value:"triangle-list","onUpdate:modelValue":i[0]||(i[0]=a=>n.value=a)},null,512),[[gi,n.value]]),it(" triangle List ")]),Ae("label",null,[ui(Ae("input",{type:"radio",value:"triangle-strip","onUpdate:modelValue":i[1]||(i[1]=a=>n.value=a)},null,512),[[gi,n.value]]),it(" triangle Strip ")])]),xe(ki)]))}}),iI=OA({history:nA("/webgpu-study/"),routes:[{path:"/",name:"triangle",component:VA},{path:"/points",name:"points",component:KA},{path:"/lines-strip",name:"lines-strip",component:JA},{path:"/triangle-strip",name:"triangle-strip",component:rI}]});XC.registerLanguage("javascript",Ov);const Xc=Sv(kA);Xc.use(iI);Xc.use(bv);Xc.mount("#app");

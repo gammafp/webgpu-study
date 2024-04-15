@@ -50,7 +50,7 @@ const render = async (triangleOption: GPUPrimitiveTopology = 'triangle-list') =>
 
             @fragment
             fn fragmentMain() -> @location(0) vec4f {
-                let new_color = vec4f(1, 0, 0, 1.0); 
+                let new_color = vec4f(0.98, 0.52, 0.447, 1.0); 
                 return new_color;
             }
         `,

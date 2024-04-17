@@ -23,6 +23,7 @@ import { RouterLink, RouterView } from "vue-router";
                 <nav>
                     <RouterLink to="/triangle-colored">Triangle Colored</RouterLink>
                     <RouterLink to="/triangle-colored-unique-buffer">Triangle Colored Unique Buffer</RouterLink>
+                    <RouterLink to="/first-quad">First Quad</RouterLink>
                     <span class="ms-3">...</span>
                     <!-- <RouterLink to="/points">Points</RouterLink>
                     <RouterLink to="/lines-strip">Lines and strips</RouterLink>

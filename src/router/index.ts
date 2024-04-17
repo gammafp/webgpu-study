@@ -6,6 +6,7 @@ import TriangleStrip from "@/views/start/4-triangle-strip/TriangleStrip.vue";
 
 import TriangleColored from "@/views/buffers/1-triangle-colored/TriangleColored.vue";
 import TriangleColoredUniqueBuffer from '@/views/buffers/2-triangle-colored-unique-buffer/TriangleColoredUniqueBuffer.vue';
+import FirstQuad from "@/views/buffers/3-first-quad/FirstQuad.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
             path: "/triangle-colored-unique-buffer",
             name: "triangle-colored-unique-buffer",
             component: TriangleColoredUniqueBuffer
+        },
+        {
+            path: "/first-quad",
+            name: "first-quad",
+            component: FirstQuad
         }
     ],
 });

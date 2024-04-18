@@ -10,7 +10,7 @@ onMounted(() => {
 <template>
     <div class="d-flex flex-column justify-content-center align-items-center">
         <div>
-            <h3>First Quad</h3>
+            <h3>First Quad with Index</h3>
         </div>
         <CanvasContainer />
     </div>

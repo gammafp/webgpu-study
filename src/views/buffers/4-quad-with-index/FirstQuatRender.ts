@@ -20,12 +20,10 @@ export const render = async () => {
     // prettier-ignore
     const vertexData = new Float32Array([
         // Position     // Color
-        -0.5, -0.5,     1, 0, 0, 
-        0.5, -0.5,      0, 1, 0,
-        -0.5, 0.5,      1, 1, 0,
-        -0.5, 0.5,      1, 1, 0,
-        0.5, -0.5,      0, 1, 0,
-        0.5, 0.5,       0, 0, 1,
+        -0.5, -0.5,     1, 0, 0, // index 0 
+        0.5, -0.5,      0, 1, 0, // index 1
+        -0.5, 0.5,      1, 1, 0, // index 2
+        0.5, 0.5,       0, 0, 1, // index 3
     ]);
 
     const vertexBuffer = device.createBuffer({
@@ -37,6 +35,15 @@ export const render = async () => {
     new Float32Array(vertexBuffer.getMappedRange()).set(vertexData);
     vertexBuffer.unmap();
 
+    // Buffer index
+    const indexData = new Uint32Array([0, 1, 2, 1, 2, 3]);
+    const indexBuffer = device.createBuffer({
+        size: indexData.byteLength,
+        usage: GPUBufferUsage.INDEX,
+        mappedAtCreation: true,
+    });
+    new Uint32Array(indexBuffer.getMappedRange()).set(indexData);
+    indexBuffer.unmap();
 
     const shaderModule = device.createShaderModule({
         code: `
@@ -65,7 +72,8 @@ export const render = async () => {
             }
         `
     });
-
+    console.log("Curso: ", 4*(2+3));
+    console.log("Index Buffer: ", Float32Array.BYTES_PER_ELEMENT * 5);
 
     const renderPipeline = device.createRenderPipeline({
         label: "render for quad",
@@ -117,7 +125,9 @@ export const render = async () => {
 
     passEncoder.setPipeline(renderPipeline);
     passEncoder.setVertexBuffer(0, vertexBuffer);
-    passEncoder.draw(6, 1, 0, 0);
+    passEncoder.setIndexBuffer(indexBuffer, "uint32")
+
+    passEncoder.drawIndexed(6, 1, 0, 0);
 
     passEncoder.end();
 

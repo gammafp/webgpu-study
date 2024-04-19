@@ -15,20 +15,31 @@ import { RouterLink, RouterView } from "vue-router";
                     <RouterLink to="/">Triangle</RouterLink>
                     <RouterLink to="/points">Points</RouterLink>
                     <RouterLink to="/lines-strip">Lines and strips</RouterLink>
-                    <RouterLink to="/triangle-strip">Triangles and strips</RouterLink>
+                    <RouterLink to="/triangle-strip"
+                        >Triangles and strips</RouterLink
+                    >
                 </nav>
                 <div class="text-center">
                     <h5>- Buffers -</h5>
                 </div>
                 <nav>
-                    <RouterLink to="/triangle-colored">Triangle Colored</RouterLink>
-                    <RouterLink to="/triangle-colored-unique-buffer">Triangle Colored Unique Buffer</RouterLink>
+                    <RouterLink to="/triangle-colored"
+                        >Triangle Colored</RouterLink
+                    >
+                    <RouterLink to="/triangle-colored-unique-buffer"
+                        >Triangle Colored Unique Buffer</RouterLink
+                    >
                     <RouterLink to="/first-quad">First Quad</RouterLink>
-                    <RouterLink to="/quad-with-index">Quad With Index</RouterLink>
+                    <RouterLink to="/quad-with-index"
+                        >Quad With Index</RouterLink
+                    >
+                </nav>
+                <div class="text-center">
+                    <h5>- Transforms and Matrix -</h5>
+                </div>
+                <nav>
+                    <RouterLink to="/transforms">Transforms</RouterLink>
                     <span class="ms-3">...</span>
-                    <!-- <RouterLink to="/points">Points</RouterLink>
-                    <RouterLink to="/lines-strip">Lines and strips</RouterLink>
-                    <RouterLink to="/triangle-strip">Triangles and strips</RouterLink> -->
                 </nav>
             </div>
         </header>

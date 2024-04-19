@@ -9,6 +9,9 @@ import TriangleColoredUniqueBuffer from '@/views/buffers/2-triangle-colored-uniq
 import FirstQuad from "@/views/buffers/3-first-quad/FirstQuad.vue";
 import QuadWithIndex from "@/views/buffers/4-quad-with-index/QuadWithIndex.vue";
 
+import Transforms from "@/views/transformations/1-transforms/Transforms.vue";
+
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -51,6 +54,11 @@ const router = createRouter({
             path: "/quad-with-index",
             name: "quad-with-index",
             component: QuadWithIndex
+        },
+        {
+            path: "/transforms",
+            name: "transforms",
+            component: Transforms
         }
     ],
 });

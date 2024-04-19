@@ -13,6 +13,7 @@
     "dependencies": {
         "@highlightjs/vue-plugin": "^2.1.0",
         "bootstrap": "^5.3.3",
+        "gl-matrix": "^3.4.3",
         "highlight.js": "^11.9.0",
         "vue": "^3.4.21",
         "vue-router": "^4.3.0"

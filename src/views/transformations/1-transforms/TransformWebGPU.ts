@@ -1,3 +1,4 @@
+import VertexShaderSourcec from './vertex.wgsl?raw';
 
 export const render = async () => {
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -40,25 +41,6 @@ export const render = async () => {
 
     const shaderModule = device.createShaderModule({
         code: `
-
-            struct VertexIn {
-                @location(0) position: vec2<f32>,
-                @location(1) color: vec3<f32>
-            }
-
-            struct VertexOut {
-                @builtin(position) position: vec4<f32>,
-                @location(0) color: vec3<f32>
-            }
-
-            @vertex
-            fn vertex_main(config: VertexIn) -> VertexOut {
-                var out: VertexOut;
-                out.position = vec4<f32>(config.position, 0.0, 1.0);
-                out.color = config.color;
-                return out;
-            }
-
             @fragment
             fn fragment_main(@location(0) color: vec3<f32>) -> @location(0) vec4<f32> {
                 return vec4<f32>(color, 1.0);
@@ -67,11 +49,16 @@ export const render = async () => {
     });
 
 
+    const vertexShaderModule = device.createShaderModule({
+        code: VertexShaderSourcec
+    });
+
+
     const renderPipeline = device.createRenderPipeline({
         label: "render for quad",
         layout: "auto",
         vertex: {
-            module: shaderModule,
+            module: vertexShaderModule,
             entryPoint: "vertex_main",
             buffers: [
                 {

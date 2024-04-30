@@ -5,7 +5,7 @@
     "compilerOptions": {
         "composite": true,
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-        "types": ["@webgpu/types"],
+        "types": ["@webgpu/types", "@types/node"],
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"]

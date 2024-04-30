@@ -6,3 +6,12 @@ declare module '@highlightjs/vue-plugin' {
   const plugin: Plugin;
   export default plugin;
 }
+
+
+declare module '../../../utils/camera' {
+    export default function createCamera(): any;
+}
+
+define: {
+    global: {}
+}

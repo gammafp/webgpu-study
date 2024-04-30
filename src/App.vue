@@ -7,6 +7,9 @@ import { RouterLink, RouterView } from "vue-router";
         <header>
             <h3 class="title">WebGPU learn</h3>
             <div class="wrapper-links">
+                <nav>
+                    <RouterLink to="/sandbox">Sandbox</RouterLink>
+                </nav>
                 <div class="text-center">
                     <h5>- Start -</h5>
                     <div class="border-bottom border-dark"></div>

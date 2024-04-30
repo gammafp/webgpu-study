@@ -11,6 +11,8 @@ import QuadWithIndex from "@/views/buffers/4-quad-with-index/QuadWithIndex.vue";
 
 import Transforms from "@/views/transformations/1-transforms/Transforms.vue";
 
+import Sandbox from "@/views/sandbox/Sandbox.vue";
+
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +21,11 @@ const router = createRouter({
             path: "/",
             name: "triangle",
             component: FirstTriangle1,
+        },
+        {
+            path: "/sandbox",
+            name: "Sandbox",
+            component: Sandbox,
         },
         {
             path: "/points",

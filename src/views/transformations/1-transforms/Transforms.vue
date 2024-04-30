@@ -23,8 +23,6 @@ const rotateX = mat4.fromXRotation(
     Math.PI / 4
 );
 
-console.log("Rotate Mat ", rotateX)
-
 onMounted(() => {
     render();
 })

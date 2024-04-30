@@ -6,8 +6,6 @@ import { createViewProjection } from "@/utils/math/projection";
 import createCamera from "../../../utils/camera";
 import { CreateTransforms, CreateViewProjection } from "@/utils/math/helper";
 
-console.log(createCamera);
-
 export const render = async (isPerspective = true, isAnimation = true) => {
     const canvas = document.getElementById("canvas") as HTMLCanvasElement;
     const context = canvas.getContext("webgpu") as GPUCanvasContext;
@@ -192,6 +190,4 @@ export const render = async (isPerspective = true, isAnimation = true) => {
     }
 
     draw();
-
-    console.log(4 * (2 + 3) * 3 * 2);
 };

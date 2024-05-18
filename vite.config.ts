@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [vue()],
     base: "/webgpu-study/",
     build: {
-        outDir: "docs"
+        outDir: "docs",
     },
     resolve: {
         alias: {
